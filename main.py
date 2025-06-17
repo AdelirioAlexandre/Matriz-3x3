@@ -19,7 +19,7 @@ def calcular():
             linha = []
             for j in range(3):
                 valor = entradas[i][j].get()
-                linha.append(float(valor))
+                linha.append(float(valor)) # Converte o valor para float
             matriz.append(linha)
 
         # Exibir matriz digitada
@@ -44,9 +44,11 @@ def calcular():
             fg="darkblue"
         )
 
+    # Tratamenhto de erro
     except ValueError:
         messagebox.showerror("Erro", "Todos os campos devem conter números válidos.")
 
+# Função principal para criar a interface gráfica (Main)
 def main():
     global janela, entradas, matriz_label, resultado_label
 
